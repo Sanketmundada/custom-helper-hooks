@@ -1,0 +1,34 @@
+{
+  "name": "custom-hook-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": "true",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.25.1",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "lint": "eslint --max-warnings 0 \"./packages/**/src/**/*.{js,jsx,mjs,ts,tsx}\"",
+    "format-check": "prettier --check \"./packages/**/src/**/*.{js,jsx,json,ts,tsx,css,scss,sass,mdx}\"",
+    "format": "prettier --write \"./packages/**/src/**/*.{js,jsx,json,ts,tsx,css,scss,sass,mdx}\"",
+    "husky-install": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,js}": [
+      "prettier --write --config .prettierrc"
+    ]
+  }
+}
