@@ -15,6 +15,6 @@
     "build": "rm -rf dist/ & tsc"
   },
   "repository": {
-    "url": "https://github.com/Sanketmundada/Custom-Hooks-React"
+    "url": "https://github.com/Sanketmundada/custom-helper-react"
   }
 }

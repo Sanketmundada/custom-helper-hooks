@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const App: React.FC = () => {
-  return <div>Hello all</div>;
+  return <div>Hello hello</div>;
 };
 
 export default App;
