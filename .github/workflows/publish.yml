@@ -32,8 +32,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       # Runs a single command using the runners shell
-      - run: cd packages/hooks
-      - run: yarn build
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - run:
+          - cd packages/hooks
+          - yarn build
+          - echo "//registry.npmjs.org/:_authToken="${{ secrets.NPM_TOKEN }} > .npmrc
+          - npm publish
