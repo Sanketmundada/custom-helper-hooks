@@ -16,5 +16,8 @@
   },
   "repository": {
     "url": "https://github.com/Sanketmundada/custom-helper-hooks"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
